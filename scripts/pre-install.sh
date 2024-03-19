@@ -10,7 +10,7 @@ sudo apt-get upgrade -y
 
 # Install Qt5 and other necessary development packages
 echo "Installing Qt and other necessary development tools..."
-sudo apt-get install -y qt5-default qt5-qmake qtbase5-dev-tools qtdeclarative5-dev
+sudo apt-get install -y qt5-default qt5-qmake qtbase5-dev-tools qtdeclarative5-dev qml-module-qtquick2
 
 # Install additional tools like a C++ compiler and make, if not already present
 sudo apt-get install -y build-essential
