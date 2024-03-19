@@ -52,8 +52,9 @@ Delete - delete an entry with provided IP or URL from database and display all r
 Retrieve - shows entry with providen IP or URL. 
 Show all - shows all entries which stored in the database.
 Many error handlings provided.
-By default, when you compile and build app it copy from data folder database with test cases. If you want empty database, just delete it from build dir. If you want test data again, you have to delete build folder and build again.
+
 
 ## Troubleshooting
 If you encounter issues with missing dependencies or libraries, ensure that the pre-install.sh script has been executed correctly.
 For problems related to Qt not being found, verify that Qt is correctly installed and that your PATH environment variable includes the Qt bin directory.
+By default, when you compile and build app it copy from data folder database with test cases. If you want empty database, just delete it from build dir. If you want test data again, you have to delete build folder and build again.
