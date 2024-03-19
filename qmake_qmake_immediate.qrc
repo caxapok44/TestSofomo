@@ -1,0 +1,6 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/">
+<file alias="data/geolocation.db">/home/ozinchenko/TestSofomo/data/geolocation.db</file>
+<file alias="scripts/pre-install.sh">/home/ozinchenko/TestSofomo/scripts/pre-install.sh</file>
+</qresource>
+</RCC>
