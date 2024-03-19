@@ -103,7 +103,7 @@ bool DatabaseManager::addEntry(const QString &originalQuery, const QString &json
     QString url = (originalQuery != ip) ? originalQuery : "";
     if (ip.isEmpty()) {
         qWarning() << "IP address is empty, not adding entry";
-        return false;  // Return false to indicate that the operation was not successful
+        return false;
     }
 
     QSqlQuery query;
@@ -224,7 +224,7 @@ QVariantList DatabaseManager::getAllEntries() {
             QVariant value = query.value(i);
             map[fieldName] = value;
 
-            qDebug() << fieldName << ": " << value.toString();  // Debugging output
+            qDebug() << fieldName << ": " << value.toString();
         }
         entriesList.append(map);
     }

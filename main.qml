@@ -43,7 +43,7 @@ ApplicationWindow {
             ScrollBar.horizontal.policy: ScrollBar.AlwaysOn
             clip: true
             contentItem: Flickable {
-                    boundsBehavior: Flickable.StopAtBounds // Prevents overscrolling
+                    boundsBehavior: Flickable.StopAtBounds
             }
 
             ColumnLayout {
@@ -126,17 +126,16 @@ ApplicationWindow {
                     }
 
                     delegate: Rectangle {
-                        // Use Rectangle to have a background and more control over the size
-                        color: "white" // Set a background color to easily identify the items
+                        color: "white"
                         width: listView.width
-                        height: 60 // Set a fixed height for each delegate item
+                        height: 60
                         RowLayout {
                             spacing: 10
 
                             Image {
                                 source: model.country_flag
-                                Layout.preferredWidth: 100 // Adjust size as needed
-                                Layout.preferredHeight: 50 // Adjust size as needed
+                                Layout.preferredWidth: 100
+                                Layout.preferredHeight: 50
                                 fillMode: Image.PreserveAspectFit
                             }
 
@@ -214,10 +213,9 @@ ApplicationWindow {
         width: parent.width * 0.6
         height: parent.height * 0.6
 
-        // Set the background color of the popup
         background: Rectangle {
-            color: "red" // Choose a color that indicates an error
-            radius: 10 // Optional: adds rounded corners to the popup background
+            color: "red"
+            radius: 10
         }
         Label {
             id: errorMessage
@@ -226,7 +224,6 @@ ApplicationWindow {
         }
     }
 
-    // Timer for hiding the popup after a certain duration
     Timer {
         id: errorTimer
         interval: 3000 // 3 seconds
@@ -245,12 +242,7 @@ ApplicationWindow {
 
             var json = JSON.parse(data)
             geolocationModel.clear()
-            // Check if 'json' is an array
             if (Array.isArray(json)) {
-                // Assuming 'json' is an array of objects with the geolocation fields
-                // Clear existing data if necessary
-
-                // Iterate through each item in the array
                 json.forEach(function (item) {
 
                     var latitude = parseFloat(item.latitude)
